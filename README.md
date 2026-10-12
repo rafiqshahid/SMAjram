@@ -25,7 +25,7 @@ while the developer's MATLAB R2026b setup did not require the same manual Java-f
 | File | Purpose |
 |---|---|
 | `prepare_smajram_resources.m` | Prepares character and font resources from the input workbook. |
-| `generate_smajramay| Generates the base character images. |
+| `generate_smajram_characters.m'| Generates the base character images. |
 | `smajram_rotation.m` | Generates rotated image variants. |
 | `smajram_blur.m` | Generates blurred image variants. |
 | `smajram_combination.m` | Generates image and background intensity combinations. |
@@ -39,7 +39,7 @@ The resource-preparation function uses the following input workbook:
 - `Shah_AjramnFont_Updated_clean.xlsx`
 
 The workbook contains the character-context and font information required to prepare the resources. 
-The program 'prepare_smajram_resources.m` will generate:
+The program prepare_smajram_resources.m will generate:
 
 - `shah_ajram240.mat`
 - `font_list50.mat`
@@ -53,14 +53,14 @@ The generated images depend on the fonts listed in the source Excel workbook bei
 
 ### Install Fonts in Windows First
 
-Install the required font files in Windows before opening MATLAB. The source workbook `Shah_AjramnFont_Updated.xlsx` contains the exact font names MATLAB recognizes and uses in the generation workflow.
+Install the required font files in Windows before opening MATLAB. The source workbook `Shah_AjramnFont_Updated_clean.xlsx` contains the exact font names MATLAB recognizes and uses in the generation workflow.
 
 Some fonts are freely available, while others may require access through Adobe Creative Cloud or an applicable Adobe font service. Requirements vary by font. 
 Obtain fonts from their appropriate sources and follow their license terms. The software repository does not redistribute font files. Users are responsible for obtaining and installing fonts they are permitted to use.
 
 ### Keyboard and Character Entry Tools
 
-Keyman and the Microsoft Urdu keyboard/language support package were used during the original preparation of the character resources to enter Shahmukhi characters correctly. The current workflow uses ASCII labels, so these keyboard tools are not runtime requirements for generating the images.
+Keyman and the Microsoft Urdu keyboard/language support package were used to prepare the character resources and enter Shahmukhi characters correctly. The current workflow uses ASCII labels, so these keyboard tools are not required at runtime to generate the images.
 
 ### Additional Setup for MATLAB R2024b
 
@@ -68,7 +68,7 @@ In the developer's tested MATLAB R2024b environment, after installing the fonts 
 
 `MATLAB path\sys\java\jre\win64\jre\lib\fonts`
 
-This is an environment-specific workaround, not a universal MATLAB requirement. The path may differ depending on where MATLAB is installed. Complete any required font setup before launching MATLAB.
+This is an environment-specific workaround, not a universal MATLAB requirement. The path may vary depending on where you install MATLAB. Complete any required font setup before launching MATLAB.
 
 In the developer's MATLAB R2026b environment, this additional step was not required. Users should install the fonts in Windows and test rendering in their own MATLAB version before generating a large dataset.
 
