@@ -2,10 +2,10 @@
 
 ## Overview
 
-SMAjram is a MATLAB-based software framework for generating synthetic character images for Punjabi Shahmukhi, a Perso-Arabic script. 
-It supports the generation of base character images and controlled image variations, including rotation, blurring, intensity combinations, and outlining.
+SMAjram is a MATLAB-based software framework for generating synthetic Punjabi Shahmukhi character images. 
+It supports generating base character images and controlled variations, including rotation, blurring, intensity combinations, and outlining.
 
-The software is intended to support research in optical character recognition (OCR), character recognition, and pattern recognition.
+The software supports research in optical character recognition (OCR), character recognition, and pattern recognition.
 
 ## Software Requirements
 
@@ -15,8 +15,7 @@ The software is intended to support research in optical character recognition (O
 - The required fonts must be installed in Windows before starting MATLAB.
 
 MATLAB's dependency analysis identified MATLAB R2024b and Image Processing Toolbox as required products. 
-Computer Vision Toolbox was not identified as a requirement. 
-Dependencies may vary if optional features or code paths are modified.
+MATLAB did not identify Computer Vision Toolbox as a requirement. Dependencies may vary if you modify optional features or code paths.
 
 Compatibility with other MATLAB releases may vary. MATLAB R2025a and b figure-rendering differences were observed during testing, 
 while the developer's MATLAB R2026b setup did not require the same manual Java-font-directory step described below. 
@@ -26,7 +25,7 @@ while the developer's MATLAB R2026b setup did not require the same manual Java-f
 | File | Purpose |
 |---|---|
 | `prepare_smajram_resources.m` | Prepares character and font resources from the input workbook. |
-| `generate_smajram_characters.m` | Generates the base character images. |
+| `generate_smajramay| Generates the base character images. |
 | `smajram_rotation.m` | Generates rotated image variants. |
 | `smajram_blur.m` | Generates blurred image variants. |
 | `smajram_combination.m` | Generates image and background intensity combinations. |
@@ -37,7 +36,7 @@ while the developer's MATLAB R2026b setup did not require the same manual Java-f
 
 The resource-preparation function uses the following input workbook:
 
-- `Shah_AjramnFont_Updated.xlsx`
+- `Shah_AjramnFont_Updated_clean.xlsx`
 
 The workbook contains the character-context and font information required to prepare the resources. 
 The program 'prepare_smajram_resources.m` will generate:
@@ -45,23 +44,23 @@ The program 'prepare_smajram_resources.m` will generate:
 - `shah_ajram240.mat`
 - `font_list50.mat`
 
-These resource files are used by the character-generation workflow.
+The character-generation workflow uses these resource files.
 
 ## Font Requirements and Rendering Setup
 
 Correct font configuration is essential for reproducing SMAjram character images. 
-The generated images depend on the availability of the fonts listed in the source Excel workbook.
+The generated images depend on the fonts listed in the source Excel workbook being available.
 
 ### Install Fonts in Windows First
 
-Install the required font files in Windows before opening MATLAB. The source workbook `Shah_AjramnFont_Updated.xlsx` contains the exact font names recognized by MATLAB and used in the generation workflow.
+Install the required font files in Windows before opening MATLAB. The source workbook `Shah_AjramnFont_Updated.xlsx` contains the exact font names MATLAB recognizes and uses in the generation workflow.
 
 Some fonts are freely available, while others may require access through Adobe Creative Cloud or an applicable Adobe font service. Requirements vary by font. 
 Obtain fonts from their appropriate sources and follow their license terms. The software repository does not redistribute font files. Users are responsible for obtaining and installing fonts they are permitted to use.
 
 ### Keyboard and Character Entry Tools
 
-Keyman and the Microsoft Urdu keyboard/language support package were used during the original preparation of the character resources to enter Shahmukhi characters correctly. The current generation workflow uses ASCII labels, so these keyboard tools are not identified as runtime requirements for generating the images.
+Keyman and the Microsoft Urdu keyboard/language support package were used during the original preparation of the character resources to enter Shahmukhi characters correctly. The current workflow uses ASCII labels, so these keyboard tools are not runtime requirements for generating the images.
 
 ### Additional Setup for MATLAB R2024b
 
@@ -69,7 +68,7 @@ In the developer's tested MATLAB R2024b environment, after installing the fonts 
 
 `MATLAB path\sys\java\jre\win64\jre\lib\fonts`
 
-This is an environment-specific workaround, not a universal MATLAB requirement. The path may differ depending on the MATLAB installation location. Complete any required font setup before launching MATLAB.
+This is an environment-specific workaround, not a universal MATLAB requirement. The path may differ depending on where MATLAB is installed. Complete any required font setup before launching MATLAB.
 
 In the developer's MATLAB R2026b environment, this additional step was not required. Users should install the fonts in Windows and test rendering in their own MATLAB version before generating a large dataset.
 
@@ -99,9 +98,9 @@ The combination and outline functions are separate transformations of the rotate
 
 Each generation function provides configurable parameters near the beginning of the script. Configure the source folder, destination folder, and relevant transformation parameters before running a function.
 
-Progress reporting and visual inspection can be enabled or disabled where supported. Visual inspection is optional and may add processing overhead.
+You can enable or disable progress reporting and visual inspection where supported. Visual inspection is optional and may add processing overhead.
 
-Use valid source and destination paths for your local environment. Ensure that sufficient storage is available before generating large image collections. Keep a record of configured parameters and execution order when reproducing an experiment.
+Use valid source and destination paths for your local environment. Ensure you have sufficient storage before generating large image collections. Keep a record of the configured parameters and execution order to reproduce an experiment.
 
 ## Ground-Truth Generation
 
@@ -113,7 +112,7 @@ The ground-truth collector:
 4. Creates a table containing the filename and label.
 5. Exports the table to the configured Excel workbook and worksheet.
 
-If unreadable files are found, their paths are saved to a separate workbook and ground-truth generation stops. Filenames that do not match the expected label convention are reported rather than silently accepted.
+If it finds unreadable files, it saves their paths to a separate workbook and stops ground-truth generation. The script reports filenames that do not match the expected label convention rather than silently accepting them.
 
 The expected filename convention places the English class label after the final underscore and before the file extension. For example:
 
@@ -129,7 +128,7 @@ In the documented production configuration, the complete SMAjram dataset compris
 
 ## Reproducibility and Compatibility
 
-For reproducible results, retain the configured parameter values, input resources, MATLAB version, and execution order. MATLAB R2024b is the tested reference environment. Some figure-rendering differences were observed in MATLAB R2025b; users should verify visual outputs in their own MATLAB environment.
+For reproducible results, retain the configured parameter values, input resources, MATLAB version, and execution order. MATLAB R2024b is the reference environment tested. We observed some figure-rendering differences in MATLAB R2025b; users should verify visual outputs in their own MATLAB environment.
 
 ## License
 
@@ -141,7 +140,7 @@ The MATLAB license and any MathWorks product licenses are separate from the SMAj
 
 ## Citation
 
-A recommended citation and DOI will be added after the software has been archived on Zenodo. Until then, cite the repository URL and identify the software version used.
+We will add a recommended citation and DOI after archiving the software on Zenodo. Until then, cite the repository URL and identify the software version used.
 
 ## Support
 
