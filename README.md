@@ -15,7 +15,7 @@ The software supports research in optical character recognition (OCR), character
 - The required fonts must be installed in Windows before starting MATLAB.
 
 MATLAB's dependency analysis identified MATLAB R2024b and Image Processing Toolbox as required products. 
-MATLAB did not identify Computer Vision Toolbox as a requirement. Dependencies may vary if you modify optional features or code paths.
+MATLAB did not identify the Computer Vision Toolbox as required. Dependencies may vary if you modify optional features or code paths.
 
 Compatibility with other MATLAB releases may vary. MATLAB R2025a and b figure-rendering differences were observed during testing, 
 while the developer's MATLAB R2026b setup did not require the same manual Java-font-directory step described below. 
@@ -60,7 +60,7 @@ Obtain fonts from their appropriate sources and follow their license terms. The 
 
 ### Keyboard and Character Entry Tools
 
-Keyman and the Microsoft Urdu keyboard/language support package were used to prepare the character resources and enter Shahmukhi characters correctly. The current workflow uses ASCII labels, so these keyboard tools are not required at runtime to generate the images.
+Keyman and the Microsoft Urdu keyboard/language support package to prepare the character resources and enter Shahmukhi characters correctly. The current workflow uses ASCII labels, so these keyboard tools are not required at runtime to generate the images.
 
 ### Additional Setup for MATLAB R2024b
 
@@ -128,19 +128,21 @@ In the documented production configuration, the complete SMAjram dataset compris
 
 ## Reproducibility and Compatibility
 
-For reproducible results, retain the configured parameter values, input resources, MATLAB version, and execution order. MATLAB R2024b is the reference environment tested. We observed some figure-rendering differences in MATLAB R2025b; users should verify visual outputs in their own MATLAB environment.
+For reproducible results, retain the configured parameter values, input resources, MATLAB version, and execution order. MATLAB R2024b is the reference environment in MATLAB R2024 b. We observed some figure-rendering differences in MATLAB R2025b; users should verify visual outputs in their own MATLAB environment.
 
 ## License
 
 SMAjram source code is released under the MIT License. See the [`LICENSE`](LICENSE) file for the complete terms.
 
-This license applies to the software source code. It does not grant permission to redistribute third-party fonts or other resources that have separate licenses. Users are responsible for obtaining and using those resources in accordance with their applicable terms.
+This license applies to the software source code. It does not grant permission to replace third-party fonts or other resources that have separate licenses. Users are responsible for obtaining and using those resources in accordance with their applicable terms.
 
 The MATLAB license and any MathWorks product licenses are separate from the SMAjram software license. Users must have their own valid licenses for MATLAB and any required toolboxes.
 
 ## Citation
 
-We will add a recommended citation and DOI after archiving the software on Zenodo. Until then, cite the repository URL and identify the software version used.
+If you use SMAjram in your research, please cite the software using the DOI provided by Zenodo. We will add the recommended citation and BibTeX entry here after the software is archived.
+
+Until then, please cite the GitHub repository URL and identify the software version used.
 
 ## Support
 
