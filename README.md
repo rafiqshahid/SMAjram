@@ -128,7 +128,7 @@ In the documented production configuration, the complete SMAjram dataset compris
 
 ## Reproducibility and Compatibility
 
-For reproducible results, retain the configured parameter values, input resources, MATLAB version, and execution order. MATLAB R2024b is the reference environment in MATLAB R2024 b. We observed some figure-rendering differences in MATLAB R2025b; users should verify visual outputs in their own MATLAB environment.
+For reproducible results, retain the configured parameter values, input resources, MATLAB version, and execution order. We created the software in MATLAB R2024b. We observed some figure-rendering differences in MATLAB R2025b; users should verify visual outputs in their own MATLAB environment.
 
 ## License
 
