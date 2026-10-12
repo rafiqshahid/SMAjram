@@ -25,7 +25,7 @@ while the developer's MATLAB R2026b setup did not require the same manual Java-f
 | File | Purpose |
 |---|---|
 | `prepare_smajram_resources.m` | Prepares character and font resources from the input workbook. |
-| `generate_smajram_characters.m'| Generates the base character images. |
+| `generate_smajram_characters.m`| Generates the base character images. |
 | `smajram_rotation.m` | Generates rotated image variants. |
 | `smajram_blur.m` | Generates blurred image variants. |
 | `smajram_combination.m` | Generates image and background intensity combinations. |
