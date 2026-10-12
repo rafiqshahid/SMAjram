@@ -18,7 +18,7 @@ MATLAB's dependency analysis identified MATLAB R2024b and Image Processing Toolb
 MATLAB did not identify the Computer Vision Toolbox as required. Dependencies may vary if you modify optional features or code paths.
 
 Compatibility with other MATLAB releases may vary. MATLAB R2025a and b figure-rendering differences were observed during testing, 
-while the developer's MATLAB R2026b setup did not require the same manual Java-font-directory step described below. 
+while the developer's MATLAB R2026b setup did not require the same manual Java font directory step described below. 
 
 ## Repository Contents
 
@@ -60,7 +60,7 @@ Obtain fonts from their appropriate sources and follow their license terms. The 
 
 ### Keyboard and Character Entry Tools
 
-Keyman and the Microsoft Urdu keyboard/language support package to prepare the character resources and enter Shahmukhi characters correctly. The current workflow uses ASCII labels, so these keyboard tools are not required at runtime to generate the images.
+We used Keyman and the Microsoft Urdu language support package, including the Urdu keyboard, to prepare the character resources and enter Shahmukhi characters accurately. These tools were needed for resource preparation and character entry but aren't required at runtime because the current image-generation workflow uses ASCII class labels.
 
 ### Additional Setup for MATLAB R2024b
 
@@ -134,13 +134,13 @@ For reproducible results, retain the configured parameter values, input resource
 
 SMAjram source code is released under the MIT License. See the [`LICENSE`](LICENSE) file for the complete terms.
 
-This license applies to the software source code. It does not grant permission to replace third-party fonts or other resources that have separate licenses. Users are responsible for obtaining and using those resources in accordance with their applicable terms.
+The MIT License applies to the SMAjram software source code. It does not grant permission to redistribute third-party fonts or other resources that are subject to separate licenses. Users are responsible for obtaining and using these resources in accordance with their respective license terms.
 
 The MATLAB license and any MathWorks product licenses are separate from the SMAjram software license. Users must have their own valid licenses for MATLAB and any required toolboxes.
 
 ## Citation
 
-If you use SMAjram in your research, please cite the software using the DOI provided by Zenodo. We will add the recommended citation and BibTeX entry here after the software is archived.
+If you use SMAjram in your research, please cite the software using the DOI provided by Zenodo. We will add the recommended citation and BibTeX entry here after we archive the software.
 
 Until then, please cite the GitHub repository URL and identify the software version used.
 
