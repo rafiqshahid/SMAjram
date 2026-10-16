@@ -11,11 +11,11 @@
 
 %% User configuration
 
-rootdir = 'D:\MATALBWork\DEREWork\';  % Dataset parent directory
-folder = 'NineBlur_2';               % Selected dataset folder
+rootdir = 'your root directory';  % Dataset parent directory
+folder = 'your folder';               % Selected dataset folder
 
-excel_name = 'NineBlur-2.xlsx';     % Output Ground Truth Excel workbook
-sheetname = 'Blur_2';                % Ground Truth worksheet
+excel_name = 'your excel.xlsx';     % Output Ground Truth Excel workbook
+sheetname = 'your sheet';                % Ground Truth worksheet
 
 tech_excel_name = 'SMAjram_TechSpecs.xlsx'; % SEPARATE output for technical specs
 tech_sheetname = 'Specs_2';                 % Technical specs worksheet
