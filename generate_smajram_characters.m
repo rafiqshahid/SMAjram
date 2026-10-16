@@ -30,7 +30,7 @@ canvas_size = 400;
 output_size = [100 100];
 
 % Font sizes
-font_sizes = [100]; %50:10:100;
+font_sizes = 50:10:100;
 
 % Number of copies of each character/font/size combination
 num_copies = 1;
@@ -77,7 +77,7 @@ num_images = num_alpha * num_fonts * num_fsize * num_copies
 
 iter = 0;
 
-for a = 240 %1:num_alpha
+for a = 1:num_alpha
     harf = alpha{a};
     for f = 1:num_fonts
         for fs = 1:num_fsize
