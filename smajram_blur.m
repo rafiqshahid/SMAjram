@@ -26,7 +26,7 @@ img_type = '.png';
 % Disk-filter radii used for blur generation
 mask_size = [1 3 5];
 % Continue global image IDs after the input images.
-output_id_start = 301 % last folder image # + 1;
+output_id_start = 432001 % last folder image # + 1;
 
 % Display options
 show_progress = true;    % Show processing progress
