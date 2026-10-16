@@ -13,7 +13,7 @@
 %% User Configuration
 
 % Output folder
-main_dir = 'AjramMainE' %
+main_dir = 'AjramMain' %
 
 % Check if the folder does not exist
 if ~isfolder(main_dir)
