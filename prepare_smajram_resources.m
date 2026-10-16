@@ -1,4 +1,4 @@
-%% Aj1-prepare_smajram_resources.m
+%% prepare_smajram_resources.m
 % Creates the character and font resource files used by the SMAjram
 % synthetic Shahmukhi character-image generation software.
 %
@@ -35,7 +35,7 @@ save('shah_ajram240.mat', ...
 
 %% Read font specification
 
-font_list = readcell('Shah_AjramnFont_Updated.xlsx', 'Sheet', 'Ajram_Fonts');
+font_list = readcell('Shah_AjramnFont_Updated_clean.xlsx', 'Sheet', 'Ajram_Fonts');
 font_list = font_list(2:51, 1);   % Select first column and remove header
 
 % Save the font list used by the image-generation software.
