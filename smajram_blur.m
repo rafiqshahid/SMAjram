@@ -18,8 +18,8 @@ clc;
 
 %% User Configuration
 
-source_folder = 'nineRot' %'AjramRot';
-destination_folder = 'nineBlur' %'Ajram_Blur';
+source_folder = 'AjramRot';
+destination_folder = 'Ajram_Blur';
 
 img_type = '.png';
 
