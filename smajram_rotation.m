@@ -11,8 +11,8 @@
 
 %% User Configuration
 
-source_folder = 'nineMain'; %'AjramMain';
-destination_folder = 'nineRot' %'AjramRot';
+source_folder = 'AjramMain';
+destination_folder = 'AjramRot';
 img_type = '.png';
 
 % Maximum rotation angle.
