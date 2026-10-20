@@ -12,7 +12,7 @@
 %% User Configuration
 
 source_folder = 'AjramMain';
-destination_folder = 'AjramRot';
+destination_folder = 'AjramRotT';
 img_type = '.png';
 
 % Maximum rotation angle.
@@ -109,13 +109,20 @@ for i = 1:num_images
         iter = iter + 1;
         output_id = output_id_start + iter - 1;
 
-        image_id = sprintf('g%08d', output_id);
+        image_id = sprintf('g%101d', output_id);
         rotation_tag = sprintf('(A%d)', theta_list(j));
 
         new_img(iter) = strcat( ...
             image_id, rotation_tag, metadata, img_type);
 
         image_path = fullfile(destination, new_img(iter));
+
+        % Protect existing output files from accidental overwriting.
+        if isfile(image_path)
+            error('Output file already exists; refusing to overwrite: %s', ...
+                image_path);
+        end
+
         imwrite(rotated_img, image_path);
 
         if show_visuals
