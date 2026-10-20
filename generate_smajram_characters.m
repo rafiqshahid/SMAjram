@@ -73,7 +73,7 @@ num_fsize = numel(font_sizes);
 
 num_images = num_alpha * num_fonts * num_fsize * num_copies
 
-% Generate base character images
+%% Generate base character images
 
 iter = 0;
 
@@ -96,7 +96,7 @@ for a = 1:num_alpha
                 'FontName', font_list{f});
 
             % Generate a unique image identifier.
-            image_id = sprintf('g%0.8d', iter);
+            image_id = sprintf('g%010d', iter);
 
             % Retain the original rendering workflow.
             title(image_id, ...
@@ -120,6 +120,12 @@ for a = 1:num_alpha
                 img_ext);
 
             image_path = fullfile(main_dir, image_name);
+
+            % Protect existing output files from accidental overwriting.
+            if isfile(image_path)
+                error('Output file already exists; refusing to overwrite: %s', ...
+                    image_path);
+            end
 
             % Save the generated character image.
             imwrite(image_resized, image_path);
