@@ -1,4 +1,4 @@
-% build_smajram_ground_truth.m (V2) 
+% build_smajram_ground_truth.m 
 %% SMAjram Ground-Truth Collector + Technical validity check
 % Collects actual image filenames and their English class labels.
 % Checks image-file readability, dimensions, extensions, and technical validity.
