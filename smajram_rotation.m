@@ -91,7 +91,7 @@ for i = 1:num_images
     [~, source_name, ~] = fileparts(filen{i});
 
     % Source format:
-    % g00000012(s100){Bahij Janna Bold}_Naon
+    % g0000000012(s100){Bahij Janna Bold}_Naon
     %
     % Remove the original global ID and retain everything beginning
     % with the font-size field.
@@ -109,7 +109,7 @@ for i = 1:num_images
         iter = iter + 1;
         output_id = output_id_start + iter - 1;
 
-        image_id = sprintf('g%101d', output_id);
+        image_id = sprintf('g%010d', output_id);
         rotation_tag = sprintf('(A%d)', theta_list(j));
 
         new_img(iter) = strcat( ...
