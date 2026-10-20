@@ -23,7 +23,7 @@ clc;
 %% User Configuration
 
 source_folder = 'RotE';
-destination_folder = 'Ajram_BlurT';
+destination_folder = 'Ajram_Blur1';
 img_type = '.png';
 
 % Disk-filter radii used for blur generation
